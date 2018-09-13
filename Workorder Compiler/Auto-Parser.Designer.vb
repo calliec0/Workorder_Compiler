@@ -85,20 +85,6 @@ Partial Class Form1
         Me.Button2 = New System.Windows.Forms.Button()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.TabPage2 = New System.Windows.Forms.TabPage()
-        Me.GroupBox10 = New System.Windows.Forms.GroupBox()
-        Me.Label12 = New System.Windows.Forms.Label()
-        Me.csr = New System.Windows.Forms.TextBox()
-        Me.Button4 = New System.Windows.Forms.Button()
-        Me.GroupBox9 = New System.Windows.Forms.GroupBox()
-        Me.Button9 = New System.Windows.Forms.Button()
-        Me.Button8 = New System.Windows.Forms.Button()
-        Me.Button3 = New System.Windows.Forms.Button()
-        Me.GroupBox8 = New System.Windows.Forms.GroupBox()
-        Me.bnxt = New System.Windows.Forms.Button()
-        Me.Button5 = New System.Windows.Forms.Button()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.tss = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -108,10 +94,6 @@ Partial Class Form1
         Me.GroupBox7.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
-        Me.TabPage2.SuspendLayout()
-        Me.GroupBox10.SuspendLayout()
-        Me.GroupBox9.SuspendLayout()
-        Me.GroupBox8.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -722,6 +704,7 @@ Partial Class Form1
         Me.t14.Size = New System.Drawing.Size(44, 20)
         Me.t14.TabIndex = 47
         Me.t14.TabStop = False
+        Me.t14.Text = "1"
         Me.t14.Visible = False
         '
         't11
@@ -732,6 +715,7 @@ Partial Class Form1
         Me.t11.Size = New System.Drawing.Size(44, 20)
         Me.t11.TabIndex = 46
         Me.t11.TabStop = False
+        Me.t11.Text = "1"
         Me.t11.Visible = False
         '
         'GroupBox7
@@ -748,6 +732,7 @@ Partial Class Form1
         '
         'Button2
         '
+        Me.Button2.Enabled = False
         Me.Button2.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Button2.Location = New System.Drawing.Point(13, 689)
         Me.Button2.Name = "Button2"
@@ -759,7 +744,6 @@ Partial Class Form1
         'TabControl1
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
-        Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Location = New System.Drawing.Point(4, 0)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
@@ -786,164 +770,11 @@ Partial Class Form1
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Check-In"
         '
-        'TabPage2
-        '
-        Me.TabPage2.BackColor = System.Drawing.SystemColors.Control
-        Me.TabPage2.Controls.Add(Me.GroupBox10)
-        Me.TabPage2.Controls.Add(Me.GroupBox9)
-        Me.TabPage2.Controls.Add(Me.GroupBox8)
-        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage2.Name = "TabPage2"
-        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage2.Size = New System.Drawing.Size(672, 737)
-        Me.TabPage2.TabIndex = 1
-        Me.TabPage2.Text = "Store Stock"
-        '
-        'GroupBox10
-        '
-        Me.GroupBox10.Controls.Add(Me.Label12)
-        Me.GroupBox10.Controls.Add(Me.csr)
-        Me.GroupBox10.Controls.Add(Me.Button4)
-        Me.GroupBox10.Location = New System.Drawing.Point(22, 35)
-        Me.GroupBox10.Name = "GroupBox10"
-        Me.GroupBox10.Size = New System.Drawing.Size(225, 184)
-        Me.GroupBox10.TabIndex = 48
-        Me.GroupBox10.TabStop = False
-        '
-        'Label12
-        '
-        Me.Label12.AutoSize = True
-        Me.Label12.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label12.Location = New System.Drawing.Point(1, 31)
-        Me.Label12.Name = "Label12"
-        Me.Label12.Size = New System.Drawing.Size(53, 24)
-        Me.Label12.TabIndex = 8
-        Me.Label12.Text = "CSR:"
-        '
-        'csr
-        '
-        Me.csr.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.csr.Location = New System.Drawing.Point(55, 31)
-        Me.csr.Name = "csr"
-        Me.csr.Size = New System.Drawing.Size(158, 29)
-        Me.csr.TabIndex = 9
-        Me.csr.TabStop = False
-        '
-        'Button4
-        '
-        Me.Button4.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button4.Location = New System.Drawing.Point(20, 112)
-        Me.Button4.Name = "Button4"
-        Me.Button4.Size = New System.Drawing.Size(125, 44)
-        Me.Button4.TabIndex = 3
-        Me.Button4.TabStop = False
-        Me.Button4.Text = "Parse"
-        Me.Button4.UseVisualStyleBackColor = True
-        '
-        'GroupBox9
-        '
-        Me.GroupBox9.Controls.Add(Me.Button9)
-        Me.GroupBox9.Controls.Add(Me.Button8)
-        Me.GroupBox9.Controls.Add(Me.Button3)
-        Me.GroupBox9.Location = New System.Drawing.Point(7, 675)
-        Me.GroupBox9.Name = "GroupBox9"
-        Me.GroupBox9.Size = New System.Drawing.Size(660, 58)
-        Me.GroupBox9.TabIndex = 47
-        Me.GroupBox9.TabStop = False
-        '
-        'Button9
-        '
-        Me.Button9.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button9.Location = New System.Drawing.Point(174, 21)
-        Me.Button9.Name = "Button9"
-        Me.Button9.Size = New System.Drawing.Size(106, 32)
-        Me.Button9.TabIndex = 45
-        Me.Button9.TabStop = False
-        Me.Button9.Text = "Help"
-        Me.Button9.UseVisualStyleBackColor = True
-        '
-        'Button8
-        '
-        Me.Button8.Font = New System.Drawing.Font("Microsoft Sans Serif", 7.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button8.Location = New System.Drawing.Point(613, 26)
-        Me.Button8.Name = "Button8"
-        Me.Button8.Size = New System.Drawing.Size(43, 22)
-        Me.Button8.TabIndex = 44
-        Me.Button8.TabStop = False
-        Me.Button8.Text = "About"
-        Me.Button8.UseVisualStyleBackColor = True
-        '
-        'Button3
-        '
-        Me.Button3.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button3.Location = New System.Drawing.Point(15, 9)
-        Me.Button3.Name = "Button3"
-        Me.Button3.Size = New System.Drawing.Size(125, 44)
-        Me.Button3.TabIndex = 2
-        Me.Button3.TabStop = False
-        Me.Button3.Text = "Clear"
-        Me.Button3.UseVisualStyleBackColor = True
-        '
-        'GroupBox8
-        '
-        Me.GroupBox8.Controls.Add(Me.bnxt)
-        Me.GroupBox8.Controls.Add(Me.Button5)
-        Me.GroupBox8.Controls.Add(Me.Label11)
-        Me.GroupBox8.Controls.Add(Me.tss)
-        Me.GroupBox8.Location = New System.Drawing.Point(275, 27)
-        Me.GroupBox8.Name = "GroupBox8"
-        Me.GroupBox8.Size = New System.Drawing.Size(333, 642)
-        Me.GroupBox8.TabIndex = 46
-        Me.GroupBox8.TabStop = False
-        '
-        'bnxt
-        '
-        Me.bnxt.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.bnxt.Location = New System.Drawing.Point(183, 574)
-        Me.bnxt.Name = "bnxt"
-        Me.bnxt.Size = New System.Drawing.Size(125, 44)
-        Me.bnxt.TabIndex = 5
-        Me.bnxt.TabStop = False
-        Me.bnxt.Text = "Next"
-        Me.bnxt.UseVisualStyleBackColor = True
-        '
-        'Button5
-        '
-        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Button5.Location = New System.Drawing.Point(12, 574)
-        Me.Button5.Name = "Button5"
-        Me.Button5.Size = New System.Drawing.Size(125, 44)
-        Me.Button5.TabIndex = 4
-        Me.Button5.TabStop = False
-        Me.Button5.Text = "Previous"
-        Me.Button5.UseVisualStyleBackColor = True
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label11.Location = New System.Drawing.Point(8, 8)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(51, 24)
-        Me.Label11.TabIndex = 1
-        Me.Label11.Text = "Input"
-        '
-        'tss
-        '
-        Me.tss.Font = New System.Drawing.Font("Microsoft Sans Serif", 13.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.tss.HideSelection = False
-        Me.tss.Location = New System.Drawing.Point(12, 35)
-        Me.tss.Multiline = True
-        Me.tss.Name = "tss"
-        Me.tss.Size = New System.Drawing.Size(296, 533)
-        Me.tss.TabIndex = 0
-        Me.tss.TabStop = False
-        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(684, 762)
+        Me.ClientSize = New System.Drawing.Size(684, 761)
         Me.Controls.Add(Me.TabControl1)
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
         Me.MaximizeBox = False
@@ -968,12 +799,6 @@ Partial Class Form1
         Me.GroupBox7.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
-        Me.TabPage2.ResumeLayout(False)
-        Me.GroupBox10.ResumeLayout(False)
-        Me.GroupBox10.PerformLayout()
-        Me.GroupBox9.ResumeLayout(False)
-        Me.GroupBox8.ResumeLayout(False)
-        Me.GroupBox8.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1039,19 +864,5 @@ Partial Class Form1
     Friend WithEvents t11 As System.Windows.Forms.TextBox
     Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
     Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
-    Friend WithEvents TabPage2 As System.Windows.Forms.TabPage
-    Friend WithEvents tss As System.Windows.Forms.TextBox
-    Friend WithEvents Label11 As System.Windows.Forms.Label
-    Friend WithEvents Button8 As System.Windows.Forms.Button
-    Friend WithEvents Label12 As System.Windows.Forms.Label
-    Friend WithEvents csr As System.Windows.Forms.TextBox
-    Friend WithEvents bnxt As System.Windows.Forms.Button
-    Friend WithEvents Button5 As System.Windows.Forms.Button
-    Friend WithEvents Button4 As System.Windows.Forms.Button
-    Friend WithEvents Button3 As System.Windows.Forms.Button
-    Friend WithEvents Button9 As System.Windows.Forms.Button
-    Friend WithEvents GroupBox10 As System.Windows.Forms.GroupBox
-    Friend WithEvents GroupBox9 As System.Windows.Forms.GroupBox
-    Friend WithEvents GroupBox8 As System.Windows.Forms.GroupBox
 
 End Class

@@ -54,17 +54,19 @@
         pl.Checked = False
     End Sub
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
-        MessageBox.Show("All code written by Nicholas Fry", "About")
+        MessageBox.Show("All code written by Nicholas Fry, Version 3.2 by Nicholas Fry and Callie Gary", "About")
     End Sub
     Private Sub copy_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles copy.Click
 
-        If t11.Text = "" Then
-            MessageBox.Show("Please enter days to contact by clicking" & Environment.NewLine & "'Days to Contact' in the Lower Left.", "Error: Days to contact not set")
-        ElseIf t5.Text = "" Then
-            MessageBox.Show("Please enter POS ID in the field in the upper right.", "Error: CSR name not set")
-        Else
-            'dim variables, t() is text fields, c for counting, final is the output string, rb() is the raw radio button inputs, psw is powerspec warranty warning
-            Dim t() As String = {t1.Text.ToString, t2.Text.ToString, t3.Text.ToString, t4.Text.ToString, t5.Text.ToString, t6.Text.ToString, t7.Text.ToString, t8.Text.ToString, t9.Text.ToString, t10.Text.ToString, t11.Text.ToString, t12.Text.ToString, t13.Text.ToString}
+        'If t11.Text = "" Then
+        'MessageBox.Show("Please enter days to contact by clicking" & Environment.NewLine & "'Days to Contact' in the Lower Left.", "Error: Days to contact not set")
+        'Removing the "days to contact" requirement for the program as we are consistantly 24 hours to contact, can add back in later if that changes
+        'Button has been disabled 
+        If t5.Text = "" Then
+                MessageBox.Show("Please enter POS ID in the field in the upper right.", "Error: CSR name not set")
+            Else
+                'dim variables, t() is text fields, c for counting, final is the output string, rb() is the raw radio button inputs, psw is powerspec warranty warning
+                Dim t() As String = {t1.Text.ToString, t2.Text.ToString, t3.Text.ToString, t4.Text.ToString, t5.Text.ToString, t6.Text.ToString, t7.Text.ToString, t8.Text.ToString, t9.Text.ToString, t10.Text.ToString, t11.Text.ToString, t12.Text.ToString, t13.Text.ToString}
             Dim c As Integer = 0
             Dim final As String = ""
             Dim rb(5) As String
@@ -196,30 +198,30 @@
         t14.Text = InputBox("Current days to contact for Apple Units:", "Days to Contact")
     End Sub
 
-    Private Sub Button8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button8.Click
+    Private Sub Button8_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         MessageBox.Show("All code written by Nicholas Fry", "About")
     End Sub
 
-    Private Sub Button9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button9.Click
+    Private Sub Button9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         MessageBox.Show("Welcome to the Store Stock Quick Parser or SSQP [su-Skwip]" _
-& Environment.NewLine & Environment.NewLine & _
-"-Scan all the necessary clearance lables into the Input" & Environment.NewLine & _
-"-Click Parse to append them with '-45' " & Environment.NewLine & _
-"-Clicking Previous will let you manually cycle backward through the list." & Environment.NewLine & _
-"-Clicking Next will move to the next entry, copy it, and rename Next to Append." & Environment.NewLine & _
-"-Clicking Append will add description text around the clearance tag and copy it." & Environment.NewLine & _
+& Environment.NewLine & Environment.NewLine &
+"-Scan all the necessary clearance lables into the Input" & Environment.NewLine &
+"-Click Parse to append them with '-45' " & Environment.NewLine &
+"-Clicking Previous will let you manually cycle backward through the list." & Environment.NewLine &
+"-Clicking Next will move to the next entry, copy it, and rename Next to Append." & Environment.NewLine &
+"-Clicking Append will add description text around the clearance tag and copy it." & Environment.NewLine &
 "-Repeat as needed", "Help")
     End Sub
 
-    
-    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button3.Click
+
+    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         tss.Text = ""
         tss.Enabled = True
         currententry = 1
         bnxt.Text = "Next"
     End Sub
 
-    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button4.Click
+    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Dim orig As String = tss.Text
         Dim entrys() As String = orig.Split(New String() {Environment.NewLine}, StringSplitOptions.None)
         Dim ln As Integer = entrys.Length
@@ -244,7 +246,7 @@
         tss.Enabled = False
     End Sub
 
-    Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles bnxt.Click
+    Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         If counter = 1 Then
             Dim list As String = tss.Text
             Dim term As Integer = InStr(currententry, list, "-45", CompareMethod.Text)
@@ -286,7 +288,7 @@ endof:
 
     End Sub
 
-    Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button5.Click
+    Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
         Dim list As String = tss.Text
         Dim term As Integer = InStr(currententry, list, "-45", CompareMethod.Text)
         If currententry <> 1 Then
