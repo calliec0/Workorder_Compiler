@@ -202,111 +202,111 @@
         MessageBox.Show("All code written by Nicholas Fry", "About")
     End Sub
 
-    Private Sub Button9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        MessageBox.Show("Welcome to the Store Stock Quick Parser or SSQP [su-Skwip]" _
-& Environment.NewLine & Environment.NewLine &
-"-Scan all the necessary clearance lables into the Input" & Environment.NewLine &
-"-Click Parse to append them with '-45' " & Environment.NewLine &
-"-Clicking Previous will let you manually cycle backward through the list." & Environment.NewLine &
-"-Clicking Next will move to the next entry, copy it, and rename Next to Append." & Environment.NewLine &
-"-Clicking Append will add description text around the clearance tag and copy it." & Environment.NewLine &
-"-Repeat as needed", "Help")
-    End Sub
+    '    Private Sub Button9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    '        MessageBox.Show("Welcome to the Store Stock Quick Parser or SSQP [su-Skwip]" _
+    '& Environment.NewLine & Environment.NewLine &
+    '"-Scan all the necessary clearance lables into the Input" & Environment.NewLine &
+    '"-Click Parse to append them with '-45' " & Environment.NewLine &
+    '"-Clicking Previous will let you manually cycle backward through the list." & Environment.NewLine &
+    '"-Clicking Next will move to the next entry, copy it, and rename Next to Append." & Environment.NewLine &
+    '"-Clicking Append will add description text around the clearance tag and copy it." & Environment.NewLine &
+    '"-Repeat as needed", "Help")
+    '    End Sub
 
 
-    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        tss.Text = ""
-        tss.Enabled = True
-        currententry = 1
-        bnxt.Text = "Next"
-    End Sub
+    '    Private Sub Button3_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    '        tss.Text = ""
+    '        tss.Enabled = True
+    '        currententry = 1
+    '        bnxt.Text = "Next"
+    '    End Sub
 
-    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Dim orig As String = tss.Text
-        Dim entrys() As String = orig.Split(New String() {Environment.NewLine}, StringSplitOptions.None)
-        Dim ln As Integer = entrys.Length
-        Dim x As Integer = 0
-        For x = 0 To (ln - 1)
-            If entrys(x) <> "" Then
-                entrys(x) = String.Concat(entrys(x), "-45")
-            End If
+    '    Private Sub Button4_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    '        Dim orig As String = tss.Text
+    '        Dim entrys() As String = orig.Split(New String() {Environment.NewLine}, StringSplitOptions.None)
+    '        Dim ln As Integer = entrys.Length
+    '        Dim x As Integer = 0
+    '        For x = 0 To (ln - 1)
+    '            If entrys(x) <> "" Then
+    '                entrys(x) = String.Concat(entrys(x), "-45")
+    '            End If
 
-        Next
-        tss.Text = ""
-        x = 0
-        For Each s In entrys
-            If x = 0 Then
-                tss.Text = s
-                x += 1
-            Else
-                tss.Text = (tss.Text & Environment.NewLine & s)
-                x += 1
-            End If
-        Next
-        tss.Enabled = False
-    End Sub
+    '        Next
+    '        tss.Text = ""
+    '        x = 0
+    '        For Each s In entrys
+    '            If x = 0 Then
+    '                tss.Text = s
+    '                x += 1
+    '            Else
+    '                tss.Text = (tss.Text & Environment.NewLine & s)
+    '                x += 1
+    '            End If
+    '        Next
+    '        tss.Enabled = False
+    '    End Sub
 
-    Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        If counter = 1 Then
-            Dim list As String = tss.Text
-            Dim term As Integer = InStr(currententry, list, "-45", CompareMethod.Text)
-            Dim len As Integer
-            Dim start As Integer = currententry
-            If term <> 0 Then
-                term += 3
-                tss.SelectionStart = currententry - 1
-                tss.SelectionLength = (term - currententry)
-                len = (term - currententry)
-                currententry = term
-            Else
-                MessageBox.Show("End of List", "Error")
-                tss.DeselectAll()
-                currententry = 1
-                GoTo endof
-            End If
+    '    Private Sub Button6_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    '        If counter = 1 Then
+    '            Dim list As String = tss.Text
+    '            Dim term As Integer = InStr(currententry, list, "-45", CompareMethod.Text)
+    '            Dim len As Integer
+    '            Dim start As Integer = currententry
+    '            If term <> 0 Then
+    '                term += 3
+    '                tss.SelectionStart = currententry - 1
+    '                tss.SelectionLength = (term - currententry)
+    '                len = (term - currententry)
+    '                currententry = term
+    '            Else
+    '                MessageBox.Show("End of List", "Error")
+    '                tss.DeselectAll()
+    '                currententry = 1
+    '                GoTo endof
+    '            End If
 
-            If currententry < 0 Then
-                currententry = 1
-            End If
+    '            If currententry < 0 Then
+    '                currententry = 1
+    '            End If
 
-            crrnt = Mid(list, start, len)
-            crrnt = crrnt.Trim(Environment.NewLine)
-            crrnt = crrnt.Trim(vbCr)
-            crrnt = crrnt.Trim(vbLf)
-            My.Computer.Clipboard.SetText(crrnt)
-            counter = 2
-            bnxt.Text = "Append"
-        ElseIf counter = 2 Then
-            crrnt = crrnt.Trim(Environment.NewLine)
-            crrnt = ("Store Stock restore     " & crrnt & Environment.NewLine & csr.Text)
-            My.Computer.Clipboard.SetText(crrnt)
-            counter = 1
-            bnxt.Text = "Next"
-        End If
+    '            crrnt = Mid(list, start, len)
+    '            crrnt = crrnt.Trim(Environment.NewLine)
+    '            crrnt = crrnt.Trim(vbCr)
+    '            crrnt = crrnt.Trim(vbLf)
+    '            My.Computer.Clipboard.SetText(crrnt)
+    '            counter = 2
+    '            bnxt.Text = "Append"
+    '        ElseIf counter = 2 Then
+    '            crrnt = crrnt.Trim(Environment.NewLine)
+    '            crrnt = ("Store Stock restore     " & crrnt & Environment.NewLine & csr.Text)
+    '            My.Computer.Clipboard.SetText(crrnt)
+    '            counter = 1
+    '            bnxt.Text = "Next"
+    '        End If
 
-endof:
+    'endof:
 
-    End Sub
+    '    End Sub
 
-    Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
-        Dim list As String = tss.Text
-        Dim term As Integer = InStr(currententry, list, "-45", CompareMethod.Text)
-        If currententry <> 1 Then
-            term += 3
-            tss.SelectionStart = currententry - (term - currententry - 1)
-            tss.SelectionLength = (term - currententry)
-            currententry = currententry - (term - currententry)
-        Else
-            MessageBox.Show("Top of List", "Error")
-            tss.DeselectAll()
-            currententry = 1
-        End If
-        If currententry < 0 Then
-            currententry = 1
-        End If
-        counter = 1
-        bnxt.Text = "Next"
-    End Sub
+    '    Private Sub Button5_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
+    '        Dim list As String = tss.Text
+    '        Dim term As Integer = InStr(currententry, list, "-45", CompareMethod.Text)
+    '        If currententry <> 1 Then
+    '            term += 3
+    '            tss.SelectionStart = currententry - (term - currententry - 1)
+    '            tss.SelectionLength = (term - currententry)
+    '            currententry = currententry - (term - currententry)
+    '        Else
+    '            MessageBox.Show("Top of List", "Error")
+    '            tss.DeselectAll()
+    '            currententry = 1
+    '        End If
+    '        If currententry < 0 Then
+    '            currententry = 1
+    '        End If
+    '        counter = 1
+    '        bnxt.Text = "Next"
+    '    End Sub
 
 
 End Class
