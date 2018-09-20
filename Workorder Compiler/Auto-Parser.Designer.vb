@@ -85,6 +85,48 @@ Partial Class Form1
         Me.Button2 = New System.Windows.Forms.Button()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.TabPage2 = New System.Windows.Forms.TabPage()
+        Me.GroupAv = New System.Windows.Forms.GroupBox()
+        Me.RadioNod32 = New System.Windows.Forms.RadioButton()
+        Me.RadioIs = New System.Windows.Forms.RadioButton()
+        Me.RadioNoAv = New System.Windows.Forms.RadioButton()
+        Me.GroupBackup = New System.Windows.Forms.GroupBox()
+        Me.RadioNoDbu = New System.Windows.Forms.RadioButton()
+        Me.RadioDbu2Tb = New System.Windows.Forms.RadioButton()
+        Me.RadioDbu1Tb = New System.Windows.Forms.RadioButton()
+        Me.GroupExpedite = New System.Windows.Forms.GroupBox()
+        Me.GroupMca = New System.Windows.Forms.GroupBox()
+        Me.GroupInfo = New System.Windows.Forms.GroupBox()
+        Me.TextName = New System.Windows.Forms.TextBox()
+        Me.TextPrimaryPhone = New System.Windows.Forms.TextBox()
+        Me.TextSecondaryPhone = New System.Windows.Forms.TextBox()
+        Me.TextEmail = New System.Windows.Forms.TextBox()
+        Me.RadioButton7 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton8 = New System.Windows.Forms.RadioButton()
+        Me.RadioButton9 = New System.Windows.Forms.RadioButton()
+        Me.TextTextNumber = New System.Windows.Forms.TextBox()
+        Me.TextDevice = New System.Windows.Forms.TextBox()
+        Me.TextProblem = New System.Windows.Forms.TextBox()
+        Me.TextPassword = New System.Windows.Forms.TextBox()
+        Me.TextSerial = New System.Windows.Forms.TextBox()
+        Me.TextBrand = New System.Windows.Forms.TextBox()
+        Me.TextCondition = New System.Windows.Forms.TextBox()
+        Me.GroupBox13 = New System.Windows.Forms.GroupBox()
+        Me.ButtonCopy = New System.Windows.Forms.Button()
+        Me.ButtonClear = New System.Windows.Forms.Button()
+        Me.CheckExpedite = New System.Windows.Forms.CheckBox()
+        Me.CheckMca = New System.Windows.Forms.CheckBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.Label12 = New System.Windows.Forms.Label()
+        Me.Label19 = New System.Windows.Forms.Label()
+        Me.Label20 = New System.Windows.Forms.Label()
+        Me.Label21 = New System.Windows.Forms.Label()
+        Me.Label22 = New System.Windows.Forms.Label()
+        Me.Label23 = New System.Windows.Forms.Label()
+        Me.Label24 = New System.Windows.Forms.Label()
+        Me.Label25 = New System.Windows.Forms.Label()
+        Me.Label26 = New System.Windows.Forms.Label()
+        Me.Label27 = New System.Windows.Forms.Label()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -94,13 +136,20 @@ Partial Class Form1
         Me.GroupBox7.SuspendLayout()
         Me.TabControl1.SuspendLayout()
         Me.TabPage1.SuspendLayout()
+        Me.TabPage2.SuspendLayout()
+        Me.GroupAv.SuspendLayout()
+        Me.GroupBackup.SuspendLayout()
+        Me.GroupExpedite.SuspendLayout()
+        Me.GroupMca.SuspendLayout()
+        Me.GroupInfo.SuspendLayout()
+        Me.GroupBox13.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
         '
         Me.Label1.AutoSize = True
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label1.Location = New System.Drawing.Point(92, 10)
+        Me.Label1.Location = New System.Drawing.Point(18, 10)
         Me.Label1.Name = "Label1"
         Me.Label1.Size = New System.Drawing.Size(152, 24)
         Me.Label1.TabIndex = 0
@@ -109,7 +158,7 @@ Partial Class Form1
         't1
         '
         Me.t1.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.t1.Location = New System.Drawing.Point(250, 10)
+        Me.t1.Location = New System.Drawing.Point(176, 10)
         Me.t1.Name = "t1"
         Me.t1.Size = New System.Drawing.Size(212, 29)
         Me.t1.TabIndex = 1
@@ -744,6 +793,7 @@ Partial Class Form1
         'TabControl1
         '
         Me.TabControl1.Controls.Add(Me.TabPage1)
+        Me.TabControl1.Controls.Add(Me.TabPage2)
         Me.TabControl1.Location = New System.Drawing.Point(4, 0)
         Me.TabControl1.Name = "TabControl1"
         Me.TabControl1.SelectedIndex = 0
@@ -769,6 +819,512 @@ Partial Class Form1
         Me.TabPage1.Size = New System.Drawing.Size(672, 737)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Check-In"
+        '
+        'TabPage2
+        '
+        Me.TabPage2.Controls.Add(Me.GroupBox13)
+        Me.TabPage2.Controls.Add(Me.GroupInfo)
+        Me.TabPage2.Controls.Add(Me.GroupMca)
+        Me.TabPage2.Controls.Add(Me.GroupExpedite)
+        Me.TabPage2.Controls.Add(Me.GroupBackup)
+        Me.TabPage2.Controls.Add(Me.GroupAv)
+        Me.TabPage2.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage2.Name = "TabPage2"
+        Me.TabPage2.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage2.Size = New System.Drawing.Size(672, 737)
+        Me.TabPage2.TabIndex = 1
+        Me.TabPage2.Text = "New Check-in"
+        Me.TabPage2.UseVisualStyleBackColor = True
+        '
+        'GroupAv
+        '
+        Me.GroupAv.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupAv.Controls.Add(Me.RadioNoAv)
+        Me.GroupAv.Controls.Add(Me.RadioIs)
+        Me.GroupAv.Controls.Add(Me.RadioNod32)
+        Me.GroupAv.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupAv.Location = New System.Drawing.Point(12, 12)
+        Me.GroupAv.Name = "GroupAv"
+        Me.GroupAv.Size = New System.Drawing.Size(227, 106)
+        Me.GroupAv.TabIndex = 0
+        Me.GroupAv.TabStop = False
+        Me.GroupAv.Text = "Virus Protection"
+        '
+        'RadioNod32
+        '
+        Me.RadioNod32.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.RadioNod32.AutoSize = True
+        Me.RadioNod32.Location = New System.Drawing.Point(7, 19)
+        Me.RadioNod32.Name = "RadioNod32"
+        Me.RadioNod32.Size = New System.Drawing.Size(111, 28)
+        Me.RadioNod32.TabIndex = 0
+        Me.RadioNod32.TabStop = True
+        Me.RadioNod32.Text = "2Y Nod32"
+        Me.RadioNod32.UseVisualStyleBackColor = True
+        '
+        'RadioIs
+        '
+        Me.RadioIs.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.RadioIs.AutoSize = True
+        Me.RadioIs.Location = New System.Drawing.Point(6, 42)
+        Me.RadioIs.Name = "RadioIs"
+        Me.RadioIs.Size = New System.Drawing.Size(189, 28)
+        Me.RadioIs.TabIndex = 1
+        Me.RadioIs.TabStop = True
+        Me.RadioIs.Text = "3Y Internet Security"
+        Me.RadioIs.UseVisualStyleBackColor = True
+        '
+        'RadioNoAv
+        '
+        Me.RadioNoAv.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.RadioNoAv.AutoSize = True
+        Me.RadioNoAv.Location = New System.Drawing.Point(6, 65)
+        Me.RadioNoAv.Name = "RadioNoAv"
+        Me.RadioNoAv.Size = New System.Drawing.Size(177, 28)
+        Me.RadioNoAv.TabIndex = 2
+        Me.RadioNoAv.TabStop = True
+        Me.RadioNoAv.Text = "Already Protected"
+        Me.RadioNoAv.UseVisualStyleBackColor = True
+        '
+        'GroupBackup
+        '
+        Me.GroupBackup.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBackup.Controls.Add(Me.RadioNoDbu)
+        Me.GroupBackup.Controls.Add(Me.RadioDbu2Tb)
+        Me.GroupBackup.Controls.Add(Me.RadioDbu1Tb)
+        Me.GroupBackup.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBackup.Location = New System.Drawing.Point(245, 12)
+        Me.GroupBackup.Name = "GroupBackup"
+        Me.GroupBackup.Size = New System.Drawing.Size(419, 106)
+        Me.GroupBackup.TabIndex = 2
+        Me.GroupBackup.TabStop = False
+        Me.GroupBackup.Text = "Data Backup"
+        '
+        'RadioNoDbu
+        '
+        Me.RadioNoDbu.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.RadioNoDbu.AutoSize = True
+        Me.RadioNoDbu.Location = New System.Drawing.Point(6, 65)
+        Me.RadioNoDbu.Name = "RadioNoDbu"
+        Me.RadioNoDbu.Size = New System.Drawing.Size(189, 28)
+        Me.RadioNoDbu.TabIndex = 2
+        Me.RadioNoDbu.TabStop = True
+        Me.RadioNoDbu.Text = "Already Backed Up"
+        Me.RadioNoDbu.UseVisualStyleBackColor = True
+        '
+        'RadioDbu2Tb
+        '
+        Me.RadioDbu2Tb.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.RadioDbu2Tb.AutoSize = True
+        Me.RadioDbu2Tb.Location = New System.Drawing.Point(6, 42)
+        Me.RadioDbu2Tb.Name = "RadioDbu2Tb"
+        Me.RadioDbu2Tb.Size = New System.Drawing.Size(178, 28)
+        Me.RadioDbu2Tb.TabIndex = 1
+        Me.RadioDbu2Tb.TabStop = True
+        Me.RadioDbu2Tb.Text = "2TB Backup Drive"
+        Me.RadioDbu2Tb.UseVisualStyleBackColor = True
+        '
+        'RadioDbu1Tb
+        '
+        Me.RadioDbu1Tb.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.RadioDbu1Tb.AutoSize = True
+        Me.RadioDbu1Tb.Cursor = System.Windows.Forms.Cursors.IBeam
+        Me.RadioDbu1Tb.Location = New System.Drawing.Point(6, 19)
+        Me.RadioDbu1Tb.Name = "RadioDbu1Tb"
+        Me.RadioDbu1Tb.Size = New System.Drawing.Size(178, 28)
+        Me.RadioDbu1Tb.TabIndex = 0
+        Me.RadioDbu1Tb.TabStop = True
+        Me.RadioDbu1Tb.Text = "1TB Backup Drive"
+        Me.RadioDbu1Tb.UseVisualStyleBackColor = True
+        '
+        'GroupExpedite
+        '
+        Me.GroupExpedite.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupExpedite.Controls.Add(Me.CheckExpedite)
+        Me.GroupExpedite.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupExpedite.Location = New System.Drawing.Point(11, 124)
+        Me.GroupExpedite.Name = "GroupExpedite"
+        Me.GroupExpedite.Size = New System.Drawing.Size(294, 54)
+        Me.GroupExpedite.TabIndex = 3
+        Me.GroupExpedite.TabStop = False
+        Me.GroupExpedite.Text = "Expedited Service"
+        '
+        'GroupMca
+        '
+        Me.GroupMca.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupMca.Controls.Add(Me.CheckMca)
+        Me.GroupMca.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupMca.Location = New System.Drawing.Point(311, 124)
+        Me.GroupMca.Name = "GroupMca"
+        Me.GroupMca.Size = New System.Drawing.Size(353, 54)
+        Me.GroupMca.TabIndex = 4
+        Me.GroupMca.TabStop = False
+        Me.GroupMca.Text = "Assurance Plan"
+        '
+        'GroupInfo
+        '
+        Me.GroupInfo.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupInfo.Controls.Add(Me.Label27)
+        Me.GroupInfo.Controls.Add(Me.Label26)
+        Me.GroupInfo.Controls.Add(Me.Label25)
+        Me.GroupInfo.Controls.Add(Me.Label24)
+        Me.GroupInfo.Controls.Add(Me.Label23)
+        Me.GroupInfo.Controls.Add(Me.Label22)
+        Me.GroupInfo.Controls.Add(Me.Label21)
+        Me.GroupInfo.Controls.Add(Me.Label20)
+        Me.GroupInfo.Controls.Add(Me.Label19)
+        Me.GroupInfo.Controls.Add(Me.Label12)
+        Me.GroupInfo.Controls.Add(Me.Label11)
+        Me.GroupInfo.Controls.Add(Me.TextCondition)
+        Me.GroupInfo.Controls.Add(Me.TextBrand)
+        Me.GroupInfo.Controls.Add(Me.TextSerial)
+        Me.GroupInfo.Controls.Add(Me.TextPassword)
+        Me.GroupInfo.Controls.Add(Me.TextProblem)
+        Me.GroupInfo.Controls.Add(Me.TextDevice)
+        Me.GroupInfo.Controls.Add(Me.TextTextNumber)
+        Me.GroupInfo.Controls.Add(Me.RadioButton9)
+        Me.GroupInfo.Controls.Add(Me.RadioButton8)
+        Me.GroupInfo.Controls.Add(Me.RadioButton7)
+        Me.GroupInfo.Controls.Add(Me.TextEmail)
+        Me.GroupInfo.Controls.Add(Me.TextSecondaryPhone)
+        Me.GroupInfo.Controls.Add(Me.TextPrimaryPhone)
+        Me.GroupInfo.Controls.Add(Me.TextName)
+        Me.GroupInfo.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupInfo.Location = New System.Drawing.Point(11, 184)
+        Me.GroupInfo.Name = "GroupInfo"
+        Me.GroupInfo.Size = New System.Drawing.Size(651, 473)
+        Me.GroupInfo.TabIndex = 5
+        Me.GroupInfo.TabStop = False
+        Me.GroupInfo.Text = "Customer Info"
+        '
+        'TextName
+        '
+        Me.TextName.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextName.Location = New System.Drawing.Point(190, 36)
+        Me.TextName.Name = "TextName"
+        Me.TextName.Size = New System.Drawing.Size(455, 29)
+        Me.TextName.TabIndex = 0
+        '
+        'TextPrimaryPhone
+        '
+        Me.TextPrimaryPhone.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextPrimaryPhone.Location = New System.Drawing.Point(190, 73)
+        Me.TextPrimaryPhone.Name = "TextPrimaryPhone"
+        Me.TextPrimaryPhone.Size = New System.Drawing.Size(160, 29)
+        Me.TextPrimaryPhone.TabIndex = 1
+        '
+        'TextSecondaryPhone
+        '
+        Me.TextSecondaryPhone.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextSecondaryPhone.Location = New System.Drawing.Point(485, 73)
+        Me.TextSecondaryPhone.Name = "TextSecondaryPhone"
+        Me.TextSecondaryPhone.Size = New System.Drawing.Size(160, 29)
+        Me.TextSecondaryPhone.TabIndex = 2
+        '
+        'TextEmail
+        '
+        Me.TextEmail.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextEmail.Location = New System.Drawing.Point(190, 108)
+        Me.TextEmail.Name = "TextEmail"
+        Me.TextEmail.Size = New System.Drawing.Size(455, 29)
+        Me.TextEmail.TabIndex = 3
+        '
+        'RadioButton7
+        '
+        Me.RadioButton7.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.RadioButton7.AutoSize = True
+        Me.RadioButton7.Location = New System.Drawing.Point(206, 154)
+        Me.RadioButton7.Name = "RadioButton7"
+        Me.RadioButton7.Size = New System.Drawing.Size(84, 28)
+        Me.RadioButton7.TabIndex = 4
+        Me.RadioButton7.TabStop = True
+        Me.RadioButton7.Text = "Phone"
+        Me.RadioButton7.UseVisualStyleBackColor = True
+        '
+        'RadioButton8
+        '
+        Me.RadioButton8.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.RadioButton8.AutoSize = True
+        Me.RadioButton8.Location = New System.Drawing.Point(296, 155)
+        Me.RadioButton8.Name = "RadioButton8"
+        Me.RadioButton8.Size = New System.Drawing.Size(75, 28)
+        Me.RadioButton8.TabIndex = 5
+        Me.RadioButton8.TabStop = True
+        Me.RadioButton8.Text = "Email"
+        Me.RadioButton8.UseVisualStyleBackColor = True
+        '
+        'RadioButton9
+        '
+        Me.RadioButton9.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.RadioButton9.AutoSize = True
+        Me.RadioButton9.Location = New System.Drawing.Point(377, 155)
+        Me.RadioButton9.Name = "RadioButton9"
+        Me.RadioButton9.Size = New System.Drawing.Size(65, 28)
+        Me.RadioButton9.TabIndex = 6
+        Me.RadioButton9.TabStop = True
+        Me.RadioButton9.Text = "Text"
+        Me.RadioButton9.UseVisualStyleBackColor = True
+        '
+        'TextTextNumber
+        '
+        Me.TextTextNumber.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextTextNumber.Location = New System.Drawing.Point(448, 154)
+        Me.TextTextNumber.Name = "TextTextNumber"
+        Me.TextTextNumber.Size = New System.Drawing.Size(197, 29)
+        Me.TextTextNumber.TabIndex = 7
+        '
+        'TextDevice
+        '
+        Me.TextDevice.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextDevice.Location = New System.Drawing.Point(114, 198)
+        Me.TextDevice.Name = "TextDevice"
+        Me.TextDevice.Size = New System.Drawing.Size(160, 29)
+        Me.TextDevice.TabIndex = 8
+        '
+        'TextProblem
+        '
+        Me.TextProblem.Anchor = CType((((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Bottom) _
+            Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextProblem.Location = New System.Drawing.Point(6, 330)
+        Me.TextProblem.Multiline = True
+        Me.TextProblem.Name = "TextProblem"
+        Me.TextProblem.Size = New System.Drawing.Size(635, 137)
+        Me.TextProblem.TabIndex = 9
+        '
+        'TextPassword
+        '
+        Me.TextPassword.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextPassword.Location = New System.Drawing.Point(392, 198)
+        Me.TextPassword.Name = "TextPassword"
+        Me.TextPassword.Size = New System.Drawing.Size(253, 29)
+        Me.TextPassword.TabIndex = 10
+        '
+        'TextSerial
+        '
+        Me.TextSerial.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextSerial.Location = New System.Drawing.Point(392, 233)
+        Me.TextSerial.Name = "TextSerial"
+        Me.TextSerial.Size = New System.Drawing.Size(253, 29)
+        Me.TextSerial.TabIndex = 11
+        '
+        'TextBrand
+        '
+        Me.TextBrand.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextBrand.Location = New System.Drawing.Point(114, 233)
+        Me.TextBrand.Name = "TextBrand"
+        Me.TextBrand.Size = New System.Drawing.Size(160, 29)
+        Me.TextBrand.TabIndex = 12
+        '
+        'TextCondition
+        '
+        Me.TextCondition.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextCondition.Location = New System.Drawing.Point(114, 268)
+        Me.TextCondition.Name = "TextCondition"
+        Me.TextCondition.Size = New System.Drawing.Size(531, 29)
+        Me.TextCondition.TabIndex = 13
+        '
+        'GroupBox13
+        '
+        Me.GroupBox13.Anchor = CType(((System.Windows.Forms.AnchorStyles.Bottom Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupBox13.Controls.Add(Me.ButtonClear)
+        Me.GroupBox13.Controls.Add(Me.ButtonCopy)
+        Me.GroupBox13.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.GroupBox13.Location = New System.Drawing.Point(11, 663)
+        Me.GroupBox13.Name = "GroupBox13"
+        Me.GroupBox13.Size = New System.Drawing.Size(637, 63)
+        Me.GroupBox13.TabIndex = 6
+        Me.GroupBox13.TabStop = False
+        Me.GroupBox13.UseCompatibleTextRendering = True
+        '
+        'ButtonCopy
+        '
+        Me.ButtonCopy.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ButtonCopy.Location = New System.Drawing.Point(105, 22)
+        Me.ButtonCopy.Name = "ButtonCopy"
+        Me.ButtonCopy.Size = New System.Drawing.Size(169, 35)
+        Me.ButtonCopy.TabIndex = 0
+        Me.ButtonCopy.Text = "Copy"
+        Me.ButtonCopy.UseVisualStyleBackColor = True
+        '
+        'ButtonClear
+        '
+        Me.ButtonClear.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.ButtonClear.Location = New System.Drawing.Point(364, 22)
+        Me.ButtonClear.Name = "ButtonClear"
+        Me.ButtonClear.Size = New System.Drawing.Size(148, 35)
+        Me.ButtonClear.TabIndex = 1
+        Me.ButtonClear.Text = "Clear"
+        Me.ButtonClear.UseVisualStyleBackColor = True
+        '
+        'CheckExpedite
+        '
+        Me.CheckExpedite.AutoSize = True
+        Me.CheckExpedite.Location = New System.Drawing.Point(6, 20)
+        Me.CheckExpedite.Name = "CheckExpedite"
+        Me.CheckExpedite.Size = New System.Drawing.Size(209, 28)
+        Me.CheckExpedite.TabIndex = 0
+        Me.CheckExpedite.Text = "Expedite Me Captain!"
+        Me.CheckExpedite.UseVisualStyleBackColor = True
+        '
+        'CheckMca
+        '
+        Me.CheckMca.AutoSize = True
+        Me.CheckMca.Location = New System.Drawing.Point(6, 20)
+        Me.CheckMca.Name = "CheckMca"
+        Me.CheckMca.Size = New System.Drawing.Size(220, 28)
+        Me.CheckMca.TabIndex = 1
+        Me.CheckMca.Text = "2 Year Assurance Plan"
+        Me.CheckMca.UseVisualStyleBackColor = True
+        '
+        'Label11
+        '
+        Me.Label11.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label11.Location = New System.Drawing.Point(26, 39)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(158, 24)
+        Me.Label11.TabIndex = 14
+        Me.Label11.Text = "Customer Name:"
+        Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label12
+        '
+        Me.Label12.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label12.Location = New System.Drawing.Point(30, 76)
+        Me.Label12.Name = "Label12"
+        Me.Label12.Size = New System.Drawing.Size(154, 24)
+        Me.Label12.TabIndex = 15
+        Me.Label12.Text = "Primary Phone:"
+        Me.Label12.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label19
+        '
+        Me.Label19.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label19.Location = New System.Drawing.Point(356, 76)
+        Me.Label19.Name = "Label19"
+        Me.Label19.Size = New System.Drawing.Size(123, 24)
+        Me.Label19.TabIndex = 16
+        Me.Label19.Text = "Secondary:"
+        Me.Label19.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label20
+        '
+        Me.Label20.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label20.Location = New System.Drawing.Point(6, 111)
+        Me.Label20.Name = "Label20"
+        Me.Label20.Size = New System.Drawing.Size(178, 24)
+        Me.Label20.TabIndex = 17
+        Me.Label20.Text = "Email Address:"
+        Me.Label20.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label21
+        '
+        Me.Label21.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label21.Location = New System.Drawing.Point(22, 155)
+        Me.Label21.Name = "Label21"
+        Me.Label21.Size = New System.Drawing.Size(162, 29)
+        Me.Label21.TabIndex = 18
+        Me.Label21.Text = "Preferred Contact:"
+        Me.Label21.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label22
+        '
+        Me.Label22.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label22.Location = New System.Drawing.Point(26, 201)
+        Me.Label22.Name = "Label22"
+        Me.Label22.Size = New System.Drawing.Size(82, 24)
+        Me.Label22.TabIndex = 19
+        Me.Label22.Text = "Device:"
+        Me.Label22.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label23
+        '
+        Me.Label23.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label23.Location = New System.Drawing.Point(280, 201)
+        Me.Label23.Name = "Label23"
+        Me.Label23.Size = New System.Drawing.Size(106, 24)
+        Me.Label23.TabIndex = 20
+        Me.Label23.Text = "Password:"
+        Me.Label23.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label24
+        '
+        Me.Label24.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label24.Location = New System.Drawing.Point(10, 236)
+        Me.Label24.Name = "Label24"
+        Me.Label24.Size = New System.Drawing.Size(98, 24)
+        Me.Label24.TabIndex = 21
+        Me.Label24.Text = "Brand:"
+        Me.Label24.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label25
+        '
+        Me.Label25.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label25.Location = New System.Drawing.Point(284, 236)
+        Me.Label25.Name = "Label25"
+        Me.Label25.Size = New System.Drawing.Size(102, 24)
+        Me.Label25.TabIndex = 22
+        Me.Label25.Text = "Serial #:"
+        Me.Label25.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label26
+        '
+        Me.Label26.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label26.Location = New System.Drawing.Point(-1, 271)
+        Me.Label26.Name = "Label26"
+        Me.Label26.Size = New System.Drawing.Size(109, 24)
+        Me.Label26.TabIndex = 23
+        Me.Label26.Text = "Condition:"
+        Me.Label26.TextAlign = System.Drawing.ContentAlignment.MiddleRight
+        '
+        'Label27
+        '
+        Me.Label27.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label27.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label27.Location = New System.Drawing.Point(2, 303)
+        Me.Label27.Name = "Label27"
+        Me.Label27.Size = New System.Drawing.Size(348, 24)
+        Me.Label27.TabIndex = 24
+        Me.Label27.Text = "Check-in Reason/ Problem Description:"
+        Me.Label27.TextAlign = System.Drawing.ContentAlignment.MiddleRight
         '
         'Form1
         '
@@ -799,6 +1355,18 @@ Partial Class Form1
         Me.GroupBox7.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
         Me.TabPage1.ResumeLayout(False)
+        Me.TabPage2.ResumeLayout(False)
+        Me.GroupAv.ResumeLayout(False)
+        Me.GroupAv.PerformLayout()
+        Me.GroupBackup.ResumeLayout(False)
+        Me.GroupBackup.PerformLayout()
+        Me.GroupExpedite.ResumeLayout(False)
+        Me.GroupExpedite.PerformLayout()
+        Me.GroupMca.ResumeLayout(False)
+        Me.GroupMca.PerformLayout()
+        Me.GroupInfo.ResumeLayout(False)
+        Me.GroupInfo.PerformLayout()
+        Me.GroupBox13.ResumeLayout(False)
         Me.ResumeLayout(False)
 
     End Sub
@@ -864,5 +1432,46 @@ Partial Class Form1
     Friend WithEvents t11 As System.Windows.Forms.TextBox
     Friend WithEvents TabControl1 As System.Windows.Forms.TabControl
     Friend WithEvents TabPage1 As System.Windows.Forms.TabPage
-
+    Friend WithEvents TabPage2 As TabPage
+    Friend WithEvents GroupBackup As GroupBox
+    Friend WithEvents RadioNoDbu As RadioButton
+    Friend WithEvents RadioDbu2Tb As RadioButton
+    Friend WithEvents RadioDbu1Tb As RadioButton
+    Friend WithEvents GroupAv As GroupBox
+    Friend WithEvents RadioNoAv As RadioButton
+    Friend WithEvents RadioIs As RadioButton
+    Friend WithEvents RadioNod32 As RadioButton
+    Friend WithEvents GroupBox13 As GroupBox
+    Friend WithEvents GroupInfo As GroupBox
+    Friend WithEvents TextCondition As TextBox
+    Friend WithEvents TextBrand As TextBox
+    Friend WithEvents TextSerial As TextBox
+    Friend WithEvents TextPassword As TextBox
+    Friend WithEvents TextProblem As TextBox
+    Friend WithEvents TextDevice As TextBox
+    Friend WithEvents TextTextNumber As TextBox
+    Friend WithEvents RadioButton9 As RadioButton
+    Friend WithEvents RadioButton8 As RadioButton
+    Friend WithEvents RadioButton7 As RadioButton
+    Friend WithEvents TextEmail As TextBox
+    Friend WithEvents TextSecondaryPhone As TextBox
+    Friend WithEvents TextPrimaryPhone As TextBox
+    Friend WithEvents TextName As TextBox
+    Friend WithEvents GroupMca As GroupBox
+    Friend WithEvents GroupExpedite As GroupBox
+    Friend WithEvents ButtonClear As Button
+    Friend WithEvents ButtonCopy As Button
+    Friend WithEvents Label21 As Label
+    Friend WithEvents Label20 As Label
+    Friend WithEvents Label19 As Label
+    Friend WithEvents Label12 As Label
+    Friend WithEvents Label11 As Label
+    Friend WithEvents CheckMca As CheckBox
+    Friend WithEvents CheckExpedite As CheckBox
+    Friend WithEvents Label27 As Label
+    Friend WithEvents Label26 As Label
+    Friend WithEvents Label25 As Label
+    Friend WithEvents Label24 As Label
+    Friend WithEvents Label23 As Label
+    Friend WithEvents Label22 As Label
 End Class

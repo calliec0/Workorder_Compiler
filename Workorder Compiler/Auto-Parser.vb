@@ -202,6 +202,10 @@
         MessageBox.Show("All code written by Nicholas Fry", "About")
     End Sub
 
+    Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles RadioIs.CheckedChanged
+
+    End Sub
+
     '    Private Sub Button9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
     '        MessageBox.Show("Welcome to the Store Stock Quick Parser or SSQP [su-Skwip]" _
     '& Environment.NewLine & Environment.NewLine &
