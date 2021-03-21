@@ -1,0 +1,13 @@
+Workorder Compiler 
+Patch Notes Nov 21, 2018
+Version 4.0.2
+
+------Changes------
+* Changed Icon in the top bar to be the same as the one on the taskbar
+* Added the Patch Notes and Patch Notes button
+* Made window height resizable, width cannot be changed
+
+------Fixes------
+* Fixed issue with the Secondary Phone number adding "or" everytime the Copy button was pressed
+
+To report any issues, please email support@serasensolutions.org

@@ -1,0 +1,31 @@
+Workorder Compiler 
+Patch Notes Nov 24, 2018
+Version 4.0.2
+
+------Changes------
+* Changed Icon in the top bar to be the same as the one on the taskbar
+* Added the Patch Notes and Patch Notes button
+* Made window height resizable, width cannot be changed
+
+------Fixes------
+* Fixed issue with the Secondary Phone number adding "or" everytime the Copy button was pressed
+
+To report any issues, please email support@serasensolutions.org
+
+
+TODO: 
+
+    Additions:
+
+        Serial Number field. Must be able to accept Acer’s 22 character SN
+       (done) Add MainGear to brand field
+       (done) Add Microsoft to brand field
+        Add transaction number field, auto hyphenate 045PO1234567 becomes 045-PO-1234567
+       (done) Add AirPods and iPhone to Device field
+     
+
+    Wish list:
+
+        Installer to make it easier to deploy on new machines.
+        Add build tab for creating SV build info. Check boxes for items being checked in. HD, SSD, MB, Case, Etc.
+        Integration with Zebra printer to print lables for above addition.
