@@ -206,6 +206,40 @@
         MessageBox.Show("All code written by Nicholas Fry", "About")
     End Sub
 
+    Private Sub ButtonClear_Click(sender As Object, e As EventArgs) Handles ButtonClear.Click
+        ' Clears all given fields in the form
+        RadioNod32.Checked = False
+        RadioIs.Checked = False
+        RadioNoAv.Checked = False
+        RadioDbu1Tb.Checked = False
+        RadioDbu2Tb.Checked = False
+        RadioNoDbu.Checked = False
+        CheckExpedite.Checked = False
+        CheckMca.Checked = False
+        TextName.Text = ""
+        TextPrimaryPhone.Text = ""
+        TextSecondaryPhone.Text = ""
+        TextEmail.Text = ""
+        CheckPhone.Checked = False
+        CheckEmail.Checked = False
+        CheckText.Checked = False
+        ComboBoxTextNumber.Text = ""
+        ComboBrand.SelectedIndex = 0
+        TextPassword.Text = ""
+        ComboDevice.SelectedIndex = 0
+        TextSerial.Text = ""
+        TextCondition = ""
+        RadioACYes.Checked = False
+        RadioACNo.Checked = False
+        TextTransaction.Text = ""
+        TextProblem.Text = ""
+        RadioWarMfr.Checked = False
+        RadioWarAcc.Checked = False
+        RadioWarRep.Checked = False
+        RadioWarMCA.Checked = False
+        RadioWarNone.Checked = False
+    End Sub
+
 
     '    Private Sub Button9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
     '        MessageBox.Show("Welcome to the Store Stock Quick Parser or SSQP [su-Skwip]" _
