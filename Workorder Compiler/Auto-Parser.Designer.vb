@@ -992,7 +992,7 @@ Partial Class Form1
         'ComboDevice
         '
         Me.ComboDevice.FormattingEnabled = True
-        Me.ComboDevice.Items.AddRange(New Object() {"AirPods", "Desktop", "iPhone", "Tablet", "HDD/SSD", "Flash Media", "Other"})
+        Me.ComboDevice.Items.AddRange(New Object() {"", "AirPods", "Desktop", "iPhone", "Tablet", "HDD/SSD", "Flash Media", "Other"})
         Me.ComboDevice.Location = New System.Drawing.Point(114, 233)
         Me.ComboDevice.Name = "ComboDevice"
         Me.ComboDevice.Size = New System.Drawing.Size(160, 32)
@@ -1001,7 +1001,7 @@ Partial Class Form1
         'ComboBrand
         '
         Me.ComboBrand.FormattingEnabled = True
-        Me.ComboBrand.Items.AddRange(New Object() {"Acer", "Apple", "ASUS", "Dell", "HP", "Lenovo", "MainGear", "Microsoft", "MSI", "PowerSpec", "Toshiba", "Other"})
+        Me.ComboBrand.Items.AddRange(New Object() {"", "Acer", "Apple", "ASUS", "Dell", "HP", "Lenovo", "MainGear", "Microsoft", "MSI", "PowerSpec", "Toshiba", "Other"})
         Me.ComboBrand.Location = New System.Drawing.Point(114, 198)
         Me.ComboBrand.Name = "ComboBrand"
         Me.ComboBrand.Size = New System.Drawing.Size(160, 32)
