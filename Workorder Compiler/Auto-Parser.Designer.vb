@@ -84,7 +84,6 @@ Partial Class Form1
         Me.GroupBox7 = New System.Windows.Forms.GroupBox()
         Me.Button2 = New System.Windows.Forms.Button()
         Me.TabControl1 = New System.Windows.Forms.TabControl()
-        Me.TabPage1 = New System.Windows.Forms.TabPage()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.GroupBox13 = New System.Windows.Forms.GroupBox()
         Me.ButtonClear = New System.Windows.Forms.Button()
@@ -102,15 +101,9 @@ Partial Class Form1
         Me.LabelPhonePrimary = New System.Windows.Forms.Label()
         Me.LabelName = New System.Windows.Forms.Label()
         Me.TextCondition = New System.Windows.Forms.TextBox()
-        Me.TextBrand = New System.Windows.Forms.TextBox()
         Me.TextSerial = New System.Windows.Forms.TextBox()
         Me.TextPassword = New System.Windows.Forms.TextBox()
         Me.TextProblem = New System.Windows.Forms.TextBox()
-        Me.TextDevice = New System.Windows.Forms.TextBox()
-        Me.TextTextNumber = New System.Windows.Forms.TextBox()
-        Me.RadioButton9 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton8 = New System.Windows.Forms.RadioButton()
-        Me.RadioButton7 = New System.Windows.Forms.RadioButton()
         Me.TextEmail = New System.Windows.Forms.TextBox()
         Me.TextSecondaryPhone = New System.Windows.Forms.TextBox()
         Me.TextPrimaryPhone = New System.Windows.Forms.TextBox()
@@ -127,6 +120,22 @@ Partial Class Form1
         Me.RadioNoAv = New System.Windows.Forms.RadioButton()
         Me.RadioIs = New System.Windows.Forms.RadioButton()
         Me.RadioNod32 = New System.Windows.Forms.RadioButton()
+        Me.TabPage1 = New System.Windows.Forms.TabPage()
+        Me.ComboBoxTextNumber = New System.Windows.Forms.ComboBox()
+        Me.GroupBoxWarranty = New System.Windows.Forms.GroupBox()
+        Me.RadioWarMfr = New System.Windows.Forms.RadioButton()
+        Me.RadioWarAcc = New System.Windows.Forms.RadioButton()
+        Me.RadioWarRep = New System.Windows.Forms.RadioButton()
+        Me.RadioWarMCA = New System.Windows.Forms.RadioButton()
+        Me.RadioWarNone = New System.Windows.Forms.RadioButton()
+        Me.ComboBrand = New System.Windows.Forms.ComboBox()
+        Me.ComboDevice = New System.Windows.Forms.ComboBox()
+        Me.Label11 = New System.Windows.Forms.Label()
+        Me.CheckPhone = New System.Windows.Forms.CheckBox()
+        Me.CheckEmail = New System.Windows.Forms.CheckBox()
+        Me.CheckText = New System.Windows.Forms.CheckBox()
+        Me.RadioACYes = New System.Windows.Forms.RadioButton()
+        Me.RadioACNo = New System.Windows.Forms.RadioButton()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -135,7 +144,6 @@ Partial Class Form1
         Me.GroupBox6.SuspendLayout()
         Me.GroupBox7.SuspendLayout()
         Me.TabControl1.SuspendLayout()
-        Me.TabPage1.SuspendLayout()
         Me.TabPage2.SuspendLayout()
         Me.GroupBox13.SuspendLayout()
         Me.GroupInfo.SuspendLayout()
@@ -143,6 +151,8 @@ Partial Class Form1
         Me.GroupExpedite.SuspendLayout()
         Me.GroupBackup.SuspendLayout()
         Me.GroupAv.SuspendLayout()
+        Me.TabPage1.SuspendLayout()
+        Me.GroupBoxWarranty.SuspendLayout()
         Me.SuspendLayout()
         '
         'Label1
@@ -809,26 +819,6 @@ Partial Class Form1
         Me.TabControl1.Size = New System.Drawing.Size(680, 763)
         Me.TabControl1.TabIndex = 50
         '
-        'TabPage1
-        '
-        Me.TabPage1.BackColor = System.Drawing.SystemColors.Control
-        Me.TabPage1.Controls.Add(Me.Button2)
-        Me.TabPage1.Controls.Add(Me.GroupBox6)
-        Me.TabPage1.Controls.Add(Me.Button1)
-        Me.TabPage1.Controls.Add(Me.Clear)
-        Me.TabPage1.Controls.Add(Me.copy)
-        Me.TabPage1.Controls.Add(Me.GroupBox4)
-        Me.TabPage1.Controls.Add(Me.GroupBox7)
-        Me.TabPage1.Controls.Add(Me.GroupBox1)
-        Me.TabPage1.Controls.Add(Me.GroupBox3)
-        Me.TabPage1.Controls.Add(Me.GroupBox2)
-        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
-        Me.TabPage1.Name = "TabPage1"
-        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(672, 737)
-        Me.TabPage1.TabIndex = 0
-        Me.TabPage1.Text = "Check-In"
-        '
         'TabPage2
         '
         Me.TabPage2.Controls.Add(Me.GroupBox13)
@@ -885,6 +875,16 @@ Partial Class Form1
         '
         Me.GroupInfo.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.GroupInfo.Controls.Add(Me.RadioACNo)
+        Me.GroupInfo.Controls.Add(Me.RadioACYes)
+        Me.GroupInfo.Controls.Add(Me.CheckText)
+        Me.GroupInfo.Controls.Add(Me.CheckEmail)
+        Me.GroupInfo.Controls.Add(Me.CheckPhone)
+        Me.GroupInfo.Controls.Add(Me.Label11)
+        Me.GroupInfo.Controls.Add(Me.ComboDevice)
+        Me.GroupInfo.Controls.Add(Me.ComboBrand)
+        Me.GroupInfo.Controls.Add(Me.GroupBoxWarranty)
+        Me.GroupInfo.Controls.Add(Me.ComboBoxTextNumber)
         Me.GroupInfo.Controls.Add(Me.LabelProblem)
         Me.GroupInfo.Controls.Add(Me.LabelCondition)
         Me.GroupInfo.Controls.Add(Me.LabelSerial)
@@ -897,15 +897,9 @@ Partial Class Form1
         Me.GroupInfo.Controls.Add(Me.LabelPhonePrimary)
         Me.GroupInfo.Controls.Add(Me.LabelName)
         Me.GroupInfo.Controls.Add(Me.TextCondition)
-        Me.GroupInfo.Controls.Add(Me.TextBrand)
         Me.GroupInfo.Controls.Add(Me.TextSerial)
         Me.GroupInfo.Controls.Add(Me.TextPassword)
         Me.GroupInfo.Controls.Add(Me.TextProblem)
-        Me.GroupInfo.Controls.Add(Me.TextDevice)
-        Me.GroupInfo.Controls.Add(Me.TextTextNumber)
-        Me.GroupInfo.Controls.Add(Me.RadioButton9)
-        Me.GroupInfo.Controls.Add(Me.RadioButton8)
-        Me.GroupInfo.Controls.Add(Me.RadioButton7)
         Me.GroupInfo.Controls.Add(Me.TextEmail)
         Me.GroupInfo.Controls.Add(Me.TextSecondaryPhone)
         Me.GroupInfo.Controls.Add(Me.TextPrimaryPhone)
@@ -1057,17 +1051,8 @@ Partial Class Form1
             Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
         Me.TextCondition.Location = New System.Drawing.Point(114, 268)
         Me.TextCondition.Name = "TextCondition"
-        Me.TextCondition.Size = New System.Drawing.Size(531, 29)
+        Me.TextCondition.Size = New System.Drawing.Size(236, 29)
         Me.TextCondition.TabIndex = 13
-        '
-        'TextBrand
-        '
-        Me.TextBrand.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextBrand.Location = New System.Drawing.Point(114, 198)
-        Me.TextBrand.Name = "TextBrand"
-        Me.TextBrand.Size = New System.Drawing.Size(160, 29)
-        Me.TextBrand.TabIndex = 12
         '
         'TextSerial
         '
@@ -1095,65 +1080,8 @@ Partial Class Form1
         Me.TextProblem.Location = New System.Drawing.Point(6, 330)
         Me.TextProblem.Multiline = True
         Me.TextProblem.Name = "TextProblem"
-        Me.TextProblem.Size = New System.Drawing.Size(635, 137)
+        Me.TextProblem.Size = New System.Drawing.Size(344, 137)
         Me.TextProblem.TabIndex = 9
-        '
-        'TextDevice
-        '
-        Me.TextDevice.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextDevice.Location = New System.Drawing.Point(114, 233)
-        Me.TextDevice.Name = "TextDevice"
-        Me.TextDevice.Size = New System.Drawing.Size(160, 29)
-        Me.TextDevice.TabIndex = 8
-        '
-        'TextTextNumber
-        '
-        Me.TextTextNumber.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextTextNumber.Location = New System.Drawing.Point(448, 154)
-        Me.TextTextNumber.Name = "TextTextNumber"
-        Me.TextTextNumber.Size = New System.Drawing.Size(197, 29)
-        Me.TextTextNumber.TabIndex = 7
-        '
-        'RadioButton9
-        '
-        Me.RadioButton9.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RadioButton9.AutoSize = True
-        Me.RadioButton9.Location = New System.Drawing.Point(377, 155)
-        Me.RadioButton9.Name = "RadioButton9"
-        Me.RadioButton9.Size = New System.Drawing.Size(65, 28)
-        Me.RadioButton9.TabIndex = 6
-        Me.RadioButton9.TabStop = True
-        Me.RadioButton9.Text = "Text"
-        Me.RadioButton9.UseVisualStyleBackColor = True
-        '
-        'RadioButton8
-        '
-        Me.RadioButton8.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RadioButton8.AutoSize = True
-        Me.RadioButton8.Location = New System.Drawing.Point(296, 155)
-        Me.RadioButton8.Name = "RadioButton8"
-        Me.RadioButton8.Size = New System.Drawing.Size(75, 28)
-        Me.RadioButton8.TabIndex = 5
-        Me.RadioButton8.TabStop = True
-        Me.RadioButton8.Text = "Email"
-        Me.RadioButton8.UseVisualStyleBackColor = True
-        '
-        'RadioButton7
-        '
-        Me.RadioButton7.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.RadioButton7.AutoSize = True
-        Me.RadioButton7.Location = New System.Drawing.Point(206, 154)
-        Me.RadioButton7.Name = "RadioButton7"
-        Me.RadioButton7.Size = New System.Drawing.Size(84, 28)
-        Me.RadioButton7.TabIndex = 4
-        Me.RadioButton7.TabStop = True
-        Me.RadioButton7.Text = "Phone"
-        Me.RadioButton7.UseVisualStyleBackColor = True
         '
         'TextEmail
         '
@@ -1346,6 +1274,186 @@ Partial Class Form1
         Me.RadioNod32.Text = "2Y Nod32"
         Me.RadioNod32.UseVisualStyleBackColor = True
         '
+        'TabPage1
+        '
+        Me.TabPage1.BackColor = System.Drawing.SystemColors.Control
+        Me.TabPage1.Controls.Add(Me.Button2)
+        Me.TabPage1.Controls.Add(Me.GroupBox6)
+        Me.TabPage1.Controls.Add(Me.Button1)
+        Me.TabPage1.Controls.Add(Me.Clear)
+        Me.TabPage1.Controls.Add(Me.copy)
+        Me.TabPage1.Controls.Add(Me.GroupBox4)
+        Me.TabPage1.Controls.Add(Me.GroupBox7)
+        Me.TabPage1.Controls.Add(Me.GroupBox1)
+        Me.TabPage1.Controls.Add(Me.GroupBox3)
+        Me.TabPage1.Controls.Add(Me.GroupBox2)
+        Me.TabPage1.Location = New System.Drawing.Point(4, 22)
+        Me.TabPage1.Name = "TabPage1"
+        Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
+        Me.TabPage1.Size = New System.Drawing.Size(672, 737)
+        Me.TabPage1.TabIndex = 0
+        Me.TabPage1.Text = "Check-In"
+        '
+        'ComboBoxTextNumber
+        '
+        Me.ComboBoxTextNumber.Enabled = False
+        Me.ComboBoxTextNumber.FormattingEnabled = True
+        Me.ComboBoxTextNumber.Items.AddRange(New Object() {"Primary", "Secondary"})
+        Me.ComboBoxTextNumber.Location = New System.Drawing.Point(428, 154)
+        Me.ComboBoxTextNumber.Name = "ComboBoxTextNumber"
+        Me.ComboBoxTextNumber.Size = New System.Drawing.Size(217, 32)
+        Me.ComboBoxTextNumber.TabIndex = 25
+        '
+        'GroupBoxWarranty
+        '
+        Me.GroupBoxWarranty.Controls.Add(Me.RadioWarNone)
+        Me.GroupBoxWarranty.Controls.Add(Me.RadioWarMCA)
+        Me.GroupBoxWarranty.Controls.Add(Me.RadioWarRep)
+        Me.GroupBoxWarranty.Controls.Add(Me.RadioWarAcc)
+        Me.GroupBoxWarranty.Controls.Add(Me.RadioWarMfr)
+        Me.GroupBoxWarranty.Location = New System.Drawing.Point(364, 303)
+        Me.GroupBoxWarranty.Name = "GroupBoxWarranty"
+        Me.GroupBoxWarranty.Size = New System.Drawing.Size(281, 164)
+        Me.GroupBoxWarranty.TabIndex = 26
+        Me.GroupBoxWarranty.TabStop = False
+        Me.GroupBoxWarranty.Text = "Warranty Status"
+        '
+        'RadioWarMfr
+        '
+        Me.RadioWarMfr.AutoSize = True
+        Me.RadioWarMfr.Location = New System.Drawing.Point(6, 28)
+        Me.RadioWarMfr.Name = "RadioWarMfr"
+        Me.RadioWarMfr.Size = New System.Drawing.Size(217, 28)
+        Me.RadioWarMfr.TabIndex = 0
+        Me.RadioWarMfr.TabStop = True
+        Me.RadioWarMfr.Text = "Manufacturer Warranty"
+        Me.RadioWarMfr.UseVisualStyleBackColor = True
+        '
+        'RadioWarAcc
+        '
+        Me.RadioWarAcc.AutoSize = True
+        Me.RadioWarAcc.Location = New System.Drawing.Point(6, 53)
+        Me.RadioWarAcc.Name = "RadioWarAcc"
+        Me.RadioWarAcc.Size = New System.Drawing.Size(158, 28)
+        Me.RadioWarAcc.TabIndex = 1
+        Me.RadioWarAcc.TabStop = True
+        Me.RadioWarAcc.Text = "Accidental Plan"
+        Me.RadioWarAcc.UseVisualStyleBackColor = True
+        '
+        'RadioWarRep
+        '
+        Me.RadioWarRep.AutoSize = True
+        Me.RadioWarRep.Location = New System.Drawing.Point(6, 78)
+        Me.RadioWarRep.Name = "RadioWarRep"
+        Me.RadioWarRep.Size = New System.Drawing.Size(158, 28)
+        Me.RadioWarRep.TabIndex = 2
+        Me.RadioWarRep.TabStop = True
+        Me.RadioWarRep.Text = "Repair/Replace"
+        Me.RadioWarRep.UseVisualStyleBackColor = True
+        '
+        'RadioWarMCA
+        '
+        Me.RadioWarMCA.AutoSize = True
+        Me.RadioWarMCA.Location = New System.Drawing.Point(6, 103)
+        Me.RadioWarMCA.Name = "RadioWarMCA"
+        Me.RadioWarMCA.Size = New System.Drawing.Size(70, 28)
+        Me.RadioWarMCA.TabIndex = 3
+        Me.RadioWarMCA.TabStop = True
+        Me.RadioWarMCA.Text = "MCA"
+        Me.RadioWarMCA.UseVisualStyleBackColor = True
+        '
+        'RadioWarNone
+        '
+        Me.RadioWarNone.AutoSize = True
+        Me.RadioWarNone.Location = New System.Drawing.Point(6, 130)
+        Me.RadioWarNone.Name = "RadioWarNone"
+        Me.RadioWarNone.Size = New System.Drawing.Size(75, 28)
+        Me.RadioWarNone.TabIndex = 4
+        Me.RadioWarNone.TabStop = True
+        Me.RadioWarNone.Text = "None"
+        Me.RadioWarNone.UseVisualStyleBackColor = True
+        '
+        'ComboBrand
+        '
+        Me.ComboBrand.FormattingEnabled = True
+        Me.ComboBrand.Location = New System.Drawing.Point(114, 198)
+        Me.ComboBrand.Name = "ComboBrand"
+        Me.ComboBrand.Size = New System.Drawing.Size(160, 32)
+        Me.ComboBrand.TabIndex = 27
+        '
+        'ComboDevice
+        '
+        Me.ComboDevice.FormattingEnabled = True
+        Me.ComboDevice.Location = New System.Drawing.Point(114, 233)
+        Me.ComboDevice.Name = "ComboDevice"
+        Me.ComboDevice.Size = New System.Drawing.Size(160, 32)
+        Me.ComboDevice.TabIndex = 28
+        '
+        'Label11
+        '
+        Me.Label11.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 14.25!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label11.ForeColor = System.Drawing.Color.Red
+        Me.Label11.Location = New System.Drawing.Point(356, 271)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(133, 24)
+        Me.Label11.TabIndex = 29
+        Me.Label11.Text = "AC Adapter?*:"
+        Me.Label11.TextAlign = System.Drawing.ContentAlignment.MiddleLeft
+        '
+        'CheckPhone
+        '
+        Me.CheckPhone.AutoSize = True
+        Me.CheckPhone.Location = New System.Drawing.Point(189, 156)
+        Me.CheckPhone.Name = "CheckPhone"
+        Me.CheckPhone.Size = New System.Drawing.Size(85, 28)
+        Me.CheckPhone.TabIndex = 30
+        Me.CheckPhone.Text = "Phone"
+        Me.CheckPhone.UseVisualStyleBackColor = True
+        '
+        'CheckEmail
+        '
+        Me.CheckEmail.AutoSize = True
+        Me.CheckEmail.Location = New System.Drawing.Point(274, 156)
+        Me.CheckEmail.Name = "CheckEmail"
+        Me.CheckEmail.Size = New System.Drawing.Size(76, 28)
+        Me.CheckEmail.TabIndex = 31
+        Me.CheckEmail.Text = "Email"
+        Me.CheckEmail.UseVisualStyleBackColor = True
+        '
+        'CheckText
+        '
+        Me.CheckText.AutoSize = True
+        Me.CheckText.Location = New System.Drawing.Point(356, 156)
+        Me.CheckText.Name = "CheckText"
+        Me.CheckText.Size = New System.Drawing.Size(66, 28)
+        Me.CheckText.TabIndex = 32
+        Me.CheckText.Text = "Text"
+        Me.CheckText.UseVisualStyleBackColor = True
+        '
+        'RadioACYes
+        '
+        Me.RadioACYes.AutoSize = True
+        Me.RadioACYes.Location = New System.Drawing.Point(495, 269)
+        Me.RadioACYes.Name = "RadioACYes"
+        Me.RadioACYes.Size = New System.Drawing.Size(60, 28)
+        Me.RadioACYes.TabIndex = 33
+        Me.RadioACYes.TabStop = True
+        Me.RadioACYes.Text = "Yes"
+        Me.RadioACYes.UseVisualStyleBackColor = True
+        '
+        'RadioACNo
+        '
+        Me.RadioACNo.AutoSize = True
+        Me.RadioACNo.Location = New System.Drawing.Point(561, 269)
+        Me.RadioACNo.Name = "RadioACNo"
+        Me.RadioACNo.Size = New System.Drawing.Size(53, 28)
+        Me.RadioACNo.TabIndex = 34
+        Me.RadioACNo.TabStop = True
+        Me.RadioACNo.Text = "No"
+        Me.RadioACNo.UseVisualStyleBackColor = True
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(6.0!, 13.0!)
@@ -1374,7 +1482,6 @@ Partial Class Form1
         Me.GroupBox7.ResumeLayout(False)
         Me.GroupBox7.PerformLayout()
         Me.TabControl1.ResumeLayout(False)
-        Me.TabPage1.ResumeLayout(False)
         Me.TabPage2.ResumeLayout(False)
         Me.GroupBox13.ResumeLayout(False)
         Me.GroupInfo.ResumeLayout(False)
@@ -1387,6 +1494,9 @@ Partial Class Form1
         Me.GroupBackup.PerformLayout()
         Me.GroupAv.ResumeLayout(False)
         Me.GroupAv.PerformLayout()
+        Me.TabPage1.ResumeLayout(False)
+        Me.GroupBoxWarranty.ResumeLayout(False)
+        Me.GroupBoxWarranty.PerformLayout()
         Me.ResumeLayout(False)
 
     End Sub
@@ -1464,15 +1574,9 @@ Partial Class Form1
     Friend WithEvents GroupBox13 As GroupBox
     Friend WithEvents GroupInfo As GroupBox
     Friend WithEvents TextCondition As TextBox
-    Friend WithEvents TextBrand As TextBox
     Friend WithEvents TextSerial As TextBox
     Friend WithEvents TextPassword As TextBox
     Friend WithEvents TextProblem As TextBox
-    Friend WithEvents TextDevice As TextBox
-    Friend WithEvents TextTextNumber As TextBox
-    Friend WithEvents RadioButton9 As RadioButton
-    Friend WithEvents RadioButton8 As RadioButton
-    Friend WithEvents RadioButton7 As RadioButton
     Friend WithEvents TextEmail As TextBox
     Friend WithEvents TextSecondaryPhone As TextBox
     Friend WithEvents TextPrimaryPhone As TextBox
@@ -1494,4 +1598,19 @@ Partial Class Form1
     Friend WithEvents Label24 As Label
     Friend WithEvents Label23 As Label
     Friend WithEvents Label22 As Label
+    Friend WithEvents RadioACNo As RadioButton
+    Friend WithEvents RadioACYes As RadioButton
+    Friend WithEvents CheckText As CheckBox
+    Friend WithEvents CheckEmail As CheckBox
+    Friend WithEvents CheckPhone As CheckBox
+    Friend WithEvents Label11 As Label
+    Friend WithEvents ComboDevice As ComboBox
+    Friend WithEvents ComboBrand As ComboBox
+    Friend WithEvents GroupBoxWarranty As GroupBox
+    Friend WithEvents RadioWarNone As RadioButton
+    Friend WithEvents RadioWarMCA As RadioButton
+    Friend WithEvents RadioWarRep As RadioButton
+    Friend WithEvents RadioWarAcc As RadioButton
+    Friend WithEvents RadioWarMfr As RadioButton
+    Friend WithEvents ComboBoxTextNumber As ComboBox
 End Class

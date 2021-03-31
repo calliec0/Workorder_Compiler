@@ -56,6 +56,10 @@
     Private Sub Button1_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Button1.Click
         MessageBox.Show("All code written by Nicholas Fry, Version 3.2 by Nicholas Fry and Callie Gary", "About")
     End Sub
+    Private Sub ButtonCopy_Click(sender As Object, e As EventArgs) Handles ButtonCopy.Click
+
+    End Sub
+
     Private Sub copy_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles copy.Click
 
         'If t11.Text = "" Then
@@ -63,10 +67,10 @@
         'Removing the "days to contact" requirement for the program as we are consistantly 24 hours to contact, can add back in later if that changes
         'Button has been disabled 
         If t5.Text = "" Then
-                MessageBox.Show("Please enter POS ID in the field in the upper right.", "Error: CSR name not set")
-            Else
-                'dim variables, t() is text fields, c for counting, final is the output string, rb() is the raw radio button inputs, psw is powerspec warranty warning
-                Dim t() As String = {t1.Text.ToString, t2.Text.ToString, t3.Text.ToString, t4.Text.ToString, t5.Text.ToString, t6.Text.ToString, t7.Text.ToString, t8.Text.ToString, t9.Text.ToString, t10.Text.ToString, t11.Text.ToString, t12.Text.ToString, t13.Text.ToString}
+            MessageBox.Show("Please enter POS ID in the field in the upper right.", "Error: CSR name not set")
+        Else
+            'dim variables, t() is text fields, c for counting, final is the output string, rb() is the raw radio button inputs, psw is powerspec warranty warning
+            Dim t() As String = {t1.Text.ToString, t2.Text.ToString, t3.Text.ToString, t4.Text.ToString, t5.Text.ToString, t6.Text.ToString, t7.Text.ToString, t8.Text.ToString, t9.Text.ToString, t10.Text.ToString, t11.Text.ToString, t12.Text.ToString, t13.Text.ToString}
             Dim c As Integer = 0
             Dim final As String = ""
             Dim rb(5) As String
@@ -202,9 +206,6 @@
         MessageBox.Show("All code written by Nicholas Fry", "About")
     End Sub
 
-    Private Sub RadioButton2_CheckedChanged(sender As Object, e As EventArgs) Handles RadioIs.CheckedChanged
-
-    End Sub
 
     '    Private Sub Button9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
     '        MessageBox.Show("Welcome to the Store Stock Quick Parser or SSQP [su-Skwip]" _
