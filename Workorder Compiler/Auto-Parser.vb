@@ -228,7 +228,7 @@
         TextPassword.Text = ""
         ComboDevice.SelectedIndex = 0
         TextSerial.Text = ""
-        TextCondition = ""
+        TextCondition.Text = ""
         RadioACYes.Checked = False
         RadioACNo.Checked = False
         TextTransaction.Text = ""
