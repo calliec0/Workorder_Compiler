@@ -240,6 +240,15 @@
         RadioWarNone.Checked = False
     End Sub
 
+    Private Sub ButtonAbout_Click(sender As Object, e As EventArgs) Handles ButtonAbout.Click
+        MessageBox.Show("Written by Nicholas Fry and Callie Wells" & Environment.NewLine
+             & "Version 4.2.a", "About")
+    End Sub
+
+    Private Sub ButtonHelp_Click(sender As Object, e As EventArgs) Handles ButtonHelp.Click
+        MessageBox.Show("Bugs or Questions? Email us at support@serasensolutions.org", "Help")
+    End Sub
+
 
     '    Private Sub Button9_Click(ByVal sender As System.Object, ByVal e As System.EventArgs)
     '        MessageBox.Show("Welcome to the Store Stock Quick Parser or SSQP [su-Skwip]" _
