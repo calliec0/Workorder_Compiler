@@ -135,6 +135,26 @@
                     final = final & "Not under warranty"
                 End If
                 final = final & Environment.NewLine
+                'Check for addon services
+                final = final & "Addon Services: "
+                If RadioNod32.Checked Then
+                    final = final & "2 Year NOD 32, "
+                ElseIf RadioIs.Checked Then
+                    final = final & "3 year Internet Security, "
+                ElseIf RadioNoAv.Checked Then
+                    final = final & "No AV, "
+                End If
+                If RadioDbu1Tb.Checked Then
+                    final = final & "1TB DBU"
+                ElseIf RadioDbu2Tb.Checked Then
+                    final = final & "2TB DBU"
+                ElseIf RadioNoDbu.Checked Then
+                    final = final & "No DBU"
+                End If
+                If CheckMca.Checked Then
+                    final = final & ", MCA Plan"
+                End If
+                final = final & Environment.NewLine
                 final = final & "Checked in by: " & TextPosID.Text
             End If
             My.Computer.Clipboard.SetText(final)
