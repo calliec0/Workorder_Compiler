@@ -78,27 +78,28 @@
             MessageBox.Show("Please enter the reason for check-in", "Error: Check-in Reason Not Recorded")
         Else
             'Format text fields
-            If TextPrimaryPhone.TextLength = 10 Then
+            If Len(TextPrimaryPhone.Text) = 10 Then
                 TextPrimaryPhone.Text = TextPrimaryPhone.Text.Insert(3, "-")
                 TextPrimaryPhone.Text = TextPrimaryPhone.Text.Insert(7, "-")
             End If
-            If TextSecondaryPhone.TextLength = 10 Then
-                TextSecondaryPhone.Text.Insert(3, "-")
-                TextSecondaryPhone.Text.Insert(7, "-")
+            If Len(TextSecondaryPhone.Text) = 10 Then
+                TextSecondaryPhone.Text = TextSecondaryPhone.Text.Insert(3, "-")
+                TextSecondaryPhone.Text = TextSecondaryPhone.Text.Insert(7, "-")
             End If
-            If TextTransaction.TextLength = 12 Then
-                TextTransaction.Text.Insert(3, "-")
-                TextTransaction.Text.Insert(5, "-")
+            If Len(TextTransaction.Text) = 12 Then
+                TextTransaction.Text = TextTransaction.Text.Insert(3, "-")
+                TextTransaction.Text = TextTransaction.Text.Insert(6, "-")
             End If
             'Take all data from fields and copy to clipboard
             'Check for PowerSpec Warranty or Expedited Service
             If ComboBrand.Text = "PowerSpec" And RadioWarMfr.Checked Then
                 final = final & "********** PowerSpec 48 Hour Warranty **********" & Environment.NewLine
-            ElseIf CheckExpedite.Checked Then
+            End If
+            If CheckExpedite.Checked Then
                 final = final & "********** Expedited Service **********" & Environment.NewLine
-            Else
-                'Collate Customer information
-                final = final & "Customer Name: " & TextName.Text & Environment.NewLine
+            End If
+            'Collate Customer information
+            final = final & "Customer Name: " & TextName.Text & Environment.NewLine
                 If TextSecondaryPhone.Text <> "" Then
                     final = final & "Phone: " & TextPrimaryPhone.Text & " or " & TextSecondaryPhone.Text & Environment.NewLine
                 Else
@@ -118,6 +119,7 @@
                 final = final & Environment.NewLine
 
                 'Unit info
+                final = final & "Problem: " & TextProblem.Text & Environment.NewLine
                 final = final & "Device: " & ComboBrand.Text & " " & ComboDevice.Text & Environment.NewLine
                 final = final & "Serial Number: " & TextSerial.Text & Environment.NewLine
                 final = final & "Password: " & TextPassword.Text & Environment.NewLine
@@ -156,7 +158,7 @@
                 End If
                 final = final & Environment.NewLine
                 final = final & "Checked in by: " & TextPosID.Text
-            End If
+
             My.Computer.Clipboard.SetText(final)
         End If
 
@@ -348,6 +350,14 @@
 
     Private Sub ButtonHelp_Click(sender As Object, e As EventArgs) Handles ButtonHelp.Click
         MessageBox.Show("Bugs or Questions? Email us at support@serasensolutions.org", "Help")
+    End Sub
+
+    Private Sub CheckText_CheckedChanged(sender As Object, e As EventArgs) Handles CheckText.CheckedChanged
+        If CheckText.Checked Then
+            ComboBoxTextNumber.Enabled = True
+        Else
+            ComboBoxTextNumber.Enabled = False
+        End If
     End Sub
 
 
