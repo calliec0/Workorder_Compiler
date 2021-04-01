@@ -86,9 +86,15 @@ Partial Class Form1
         Me.TabControl1 = New System.Windows.Forms.TabControl()
         Me.TabPage2 = New System.Windows.Forms.TabPage()
         Me.GroupBox13 = New System.Windows.Forms.GroupBox()
+        Me.TextPosID = New System.Windows.Forms.TextBox()
+        Me.LabelPOS = New System.Windows.Forms.Label()
+        Me.ButtonHelp = New System.Windows.Forms.Button()
+        Me.ButtonAbout = New System.Windows.Forms.Button()
         Me.ButtonClear = New System.Windows.Forms.Button()
         Me.ButtonCopy = New System.Windows.Forms.Button()
         Me.GroupInfo = New System.Windows.Forms.GroupBox()
+        Me.TextTransaction = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
         Me.RadioACNo = New System.Windows.Forms.RadioButton()
         Me.RadioACYes = New System.Windows.Forms.RadioButton()
         Me.CheckText = New System.Windows.Forms.CheckBox()
@@ -136,12 +142,6 @@ Partial Class Form1
         Me.RadioIs = New System.Windows.Forms.RadioButton()
         Me.RadioNod32 = New System.Windows.Forms.RadioButton()
         Me.TabPage1 = New System.Windows.Forms.TabPage()
-        Me.ButtonAbout = New System.Windows.Forms.Button()
-        Me.ButtonHelp = New System.Windows.Forms.Button()
-        Me.Label11 = New System.Windows.Forms.Label()
-        Me.TextTransaction = New System.Windows.Forms.TextBox()
-        Me.LabelPOS = New System.Windows.Forms.Label()
-        Me.TextPosID = New System.Windows.Forms.TextBox()
         Me.GroupBox1.SuspendLayout()
         Me.GroupBox2.SuspendLayout()
         Me.GroupBox3.SuspendLayout()
@@ -859,6 +859,45 @@ Partial Class Form1
         Me.GroupBox13.TabStop = False
         Me.GroupBox13.UseCompatibleTextRendering = True
         '
+        'TextPosID
+        '
+        Me.TextPosID.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextPosID.Location = New System.Drawing.Point(95, 24)
+        Me.TextPosID.Name = "TextPosID"
+        Me.TextPosID.Size = New System.Drawing.Size(116, 29)
+        Me.TextPosID.TabIndex = 37
+        '
+        'LabelPOS
+        '
+        Me.LabelPOS.AutoSize = True
+        Me.LabelPOS.ForeColor = System.Drawing.Color.Red
+        Me.LabelPOS.Location = New System.Drawing.Point(6, 27)
+        Me.LabelPOS.Name = "LabelPOS"
+        Me.LabelPOS.Size = New System.Drawing.Size(83, 24)
+        Me.LabelPOS.TabIndex = 4
+        Me.LabelPOS.Text = "POS ID*:"
+        '
+        'ButtonHelp
+        '
+        Me.ButtonHelp.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonHelp.Location = New System.Drawing.Point(556, 38)
+        Me.ButtonHelp.Name = "ButtonHelp"
+        Me.ButtonHelp.Size = New System.Drawing.Size(75, 23)
+        Me.ButtonHelp.TabIndex = 3
+        Me.ButtonHelp.Text = "Help"
+        Me.ButtonHelp.UseVisualStyleBackColor = True
+        '
+        'ButtonAbout
+        '
+        Me.ButtonAbout.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.ButtonAbout.Location = New System.Drawing.Point(556, 12)
+        Me.ButtonAbout.Name = "ButtonAbout"
+        Me.ButtonAbout.Size = New System.Drawing.Size(75, 23)
+        Me.ButtonAbout.TabIndex = 2
+        Me.ButtonAbout.Text = "About"
+        Me.ButtonAbout.UseVisualStyleBackColor = True
+        '
         'ButtonClear
         '
         Me.ButtonClear.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
@@ -923,6 +962,24 @@ Partial Class Form1
         Me.GroupInfo.TabIndex = 5
         Me.GroupInfo.TabStop = False
         Me.GroupInfo.Text = "Customer Info"
+        '
+        'TextTransaction
+        '
+        Me.TextTransaction.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
+            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
+        Me.TextTransaction.Location = New System.Drawing.Point(114, 306)
+        Me.TextTransaction.Name = "TextTransaction"
+        Me.TextTransaction.Size = New System.Drawing.Size(236, 29)
+        Me.TextTransaction.TabIndex = 36
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(-1, 309)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(118, 24)
+        Me.Label11.TabIndex = 35
+        Me.Label11.Text = "Transaction: "
         '
         'RadioACNo
         '
@@ -1464,66 +1521,9 @@ Partial Class Form1
         Me.TabPage1.Location = New System.Drawing.Point(4, 22)
         Me.TabPage1.Name = "TabPage1"
         Me.TabPage1.Padding = New System.Windows.Forms.Padding(3)
-        Me.TabPage1.Size = New System.Drawing.Size(672, 737)
+        Me.TabPage1.Size = New System.Drawing.Size(672, 783)
         Me.TabPage1.TabIndex = 0
         Me.TabPage1.Text = "Check-In"
-        '
-        'ButtonAbout
-        '
-        Me.ButtonAbout.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonAbout.Location = New System.Drawing.Point(556, 12)
-        Me.ButtonAbout.Name = "ButtonAbout"
-        Me.ButtonAbout.Size = New System.Drawing.Size(75, 23)
-        Me.ButtonAbout.TabIndex = 2
-        Me.ButtonAbout.Text = "About"
-        Me.ButtonAbout.UseVisualStyleBackColor = True
-        '
-        'ButtonHelp
-        '
-        Me.ButtonHelp.Font = New System.Drawing.Font("Microsoft Sans Serif", 9.75!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.ButtonHelp.Location = New System.Drawing.Point(556, 38)
-        Me.ButtonHelp.Name = "ButtonHelp"
-        Me.ButtonHelp.Size = New System.Drawing.Size(75, 23)
-        Me.ButtonHelp.TabIndex = 3
-        Me.ButtonHelp.Text = "Help"
-        Me.ButtonHelp.UseVisualStyleBackColor = True
-        '
-        'Label11
-        '
-        Me.Label11.AutoSize = True
-        Me.Label11.Location = New System.Drawing.Point(-1, 309)
-        Me.Label11.Name = "Label11"
-        Me.Label11.Size = New System.Drawing.Size(118, 24)
-        Me.Label11.TabIndex = 35
-        Me.Label11.Text = "Transaction: "
-        '
-        'TextTransaction
-        '
-        Me.TextTransaction.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextTransaction.Location = New System.Drawing.Point(114, 306)
-        Me.TextTransaction.Name = "TextTransaction"
-        Me.TextTransaction.Size = New System.Drawing.Size(236, 29)
-        Me.TextTransaction.TabIndex = 36
-        '
-        'LabelPOS
-        '
-        Me.LabelPOS.AutoSize = True
-        Me.LabelPOS.ForeColor = System.Drawing.Color.Red
-        Me.LabelPOS.Location = New System.Drawing.Point(6, 27)
-        Me.LabelPOS.Name = "LabelPOS"
-        Me.LabelPOS.Size = New System.Drawing.Size(83, 24)
-        Me.LabelPOS.TabIndex = 4
-        Me.LabelPOS.Text = "POS ID*:"
-        '
-        'TextPosID
-        '
-        Me.TextPosID.Anchor = CType(((System.Windows.Forms.AnchorStyles.Top Or System.Windows.Forms.AnchorStyles.Left) _
-            Or System.Windows.Forms.AnchorStyles.Right), System.Windows.Forms.AnchorStyles)
-        Me.TextPosID.Location = New System.Drawing.Point(95, 24)
-        Me.TextPosID.Name = "TextPosID"
-        Me.TextPosID.Size = New System.Drawing.Size(116, 29)
-        Me.TextPosID.TabIndex = 37
         '
         'Form1
         '

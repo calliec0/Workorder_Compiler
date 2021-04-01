@@ -57,13 +57,95 @@
         MessageBox.Show("All code written by Nicholas Fry, Version 3.2 by Nicholas Fry and Callie Gary", "About")
     End Sub
     Private Sub ButtonCopy_Click(sender As Object, e As EventArgs) Handles ButtonCopy.Click
+        Dim final As String = ""
+
+        'check that all of the required fields are filled
+        If TextPosID.Text = "" Then
+            MessageBox.Show("Please enter your POS ID in the lower left.", "Error: POS ID Not Entered")
+        ElseIf TextName.Text = "" Then
+            MessageBox.Show("Please enter the customer's name.", "Error: Name Not Entered")
+        ElseIf TextPrimaryPhone.Text = "" Then
+            MessageBox.Show("Please enter customer's primary phone number.", "Error: Phone Number Not Entered")
+        ElseIf TextEmail.Text = "" Then
+            MessageBox.Show("Please enter customer's email address.", "Error: Email Address Not Entered")
+        ElseIf TextSerial.Text = "" Then
+            MessageBox.Show("Please enter unit serial number.", "Error: Missing Unit Serial Number")
+        ElseIf TextCondition.Text = "" Then
+            MessageBox.Show("Please record the condition of the unit.", "Error: Condition Not Recorded")
+        ElseIf RadioACYes.Checked = False And RadioACNo.Checked = False Then
+            MessageBox.Show("Please indicate if the AC Adapter was checked in with the unit", "Error: AC Adapter Not Indicated")
+        ElseIf TextProblem.Text = "" Then
+            MessageBox.Show("Please enter the reason for check-in", "Error: Check-in Reason Not Recorded")
+        Else
+            'Format text fields
+            If TextPrimaryPhone.TextLength = 10 Then
+                TextPrimaryPhone.Text = TextPrimaryPhone.Text.Insert(3, "-")
+                TextPrimaryPhone.Text = TextPrimaryPhone.Text.Insert(7, "-")
+            End If
+            If TextSecondaryPhone.TextLength = 10 Then
+                TextSecondaryPhone.Text.Insert(3, "-")
+                TextSecondaryPhone.Text.Insert(7, "-")
+            End If
+            If TextTransaction.TextLength = 12 Then
+                TextTransaction.Text.Insert(3, "-")
+                TextTransaction.Text.Insert(5, "-")
+            End If
+            'Take all data from fields and copy to clipboard
+            'Check for PowerSpec Warranty or Expedited Service
+            If ComboBrand.Text = "PowerSpec" And RadioWarMfr.Checked Then
+                final = final & "********** PowerSpec 48 Hour Warranty **********" & Environment.NewLine
+            ElseIf CheckExpedite.Checked Then
+                final = final & "********** Expedited Service **********" & Environment.NewLine
+            Else
+                'Collate Customer information
+                final = final & "Customer Name: " & TextName.Text & Environment.NewLine
+                If TextSecondaryPhone.Text <> "" Then
+                    final = final & "Phone: " & TextPrimaryPhone.Text & " or " & TextSecondaryPhone.Text & Environment.NewLine
+                Else
+                    final = final & "Phone: " & TextPrimaryPhone.Text & Environment.NewLine
+                End If
+                final = final & "Email: " & TextEmail.Text & Environment.NewLine
+                final = final & "Preferred Contact: "
+                If CheckPhone.Checked Then
+                    final = final & " Phone "
+                End If
+                If CheckEmail.Checked Then
+                    final = final & " Email "
+                End If
+                If CheckText.Checked Then
+                    final = final & " Text Me at " & ComboBoxTextNumber.Text
+                End If
+                final = final & Environment.NewLine
+
+                'Unit info
+                final = final & "Device: " & ComboBrand.Text & " " & ComboDevice.Text & Environment.NewLine
+                final = final & "Serial Number: " & TextSerial.Text & Environment.NewLine
+                final = final & "Password: " & TextPassword.Text & Environment.NewLine
+                final = final & "Transaction: " & TextTransaction.Text & Environment.NewLine
+                final = final & "Warranty: "
+                If RadioWarMfr.Checked Then
+                    final = final & "Manufacturer Warranty"
+                ElseIf RadioWarAcc.Checked Then
+                    final = final & "Accidental Plan"
+                ElseIf RadioWarRep.Checked Then
+                    final = final & "Repair/Replace Plan"
+                ElseIf RadioWarMCA.Checked Then
+                    final = final & "Micro Center Assurance Plan"
+                ElseIf RadioWarNone.Checked Then
+                    final = final & "Not under warranty"
+                End If
+                final = final & Environment.NewLine
+                final = final & "Checked in by: " & TextPosID.Text
+            End If
+            My.Computer.Clipboard.SetText(final)
+        End If
 
     End Sub
 
     Private Sub copy_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles copy.Click
 
         'If t11.Text = "" Then
-        'MessageBox.Show("Please enter days to contact by clicking" & Environment.NewLine & "'Days to Contact' in the Lower Left.", "Error: Days to contact not set")
+        'MessageBox.Show("Please enter days To contact by clicking" & Environment.NewLine & "'Days to Contact' in the Lower Left.", "Error: Days to contact not set")
         'Removing the "days to contact" requirement for the program as we are consistantly 24 hours to contact, can add back in later if that changes
         'Button has been disabled 
         If t5.Text = "" Then
@@ -241,8 +323,7 @@
     End Sub
 
     Private Sub ButtonAbout_Click(sender As Object, e As EventArgs) Handles ButtonAbout.Click
-        MessageBox.Show("Written by Nicholas Fry and Callie Wells" & Environment.NewLine
-             & "Version 4.2.a", "About")
+        MessageBox.Show("Written by Nicholas Fry and Callie Wells" & Environment.NewLine & "Version 4.2.a", "About")
     End Sub
 
     Private Sub ButtonHelp_Click(sender As Object, e As EventArgs) Handles ButtonHelp.Click
