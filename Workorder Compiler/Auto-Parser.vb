@@ -99,13 +99,14 @@
                 final = final & "********** Expedited Service **********" & Environment.NewLine
             End If
             'Collate Customer information
-            final = final & "Customer Name: " & TextName.Text & Environment.NewLine
-                If TextSecondaryPhone.Text <> "" Then
-                    final = final & "Phone: " & TextPrimaryPhone.Text & " or " & TextSecondaryPhone.Text & Environment.NewLine
-                Else
-                    final = final & "Phone: " & TextPrimaryPhone.Text & Environment.NewLine
-                End If
-                final = final & "Email: " & TextEmail.Text & Environment.NewLine
+            final = final & "Customer Name: " & TextName.Text & " :: "
+            If TextSecondaryPhone.Text <> "" Then
+                final = final & "Phone: " & TextPrimaryPhone.Text & " or " & TextSecondaryPhone.Text & " :: "
+            Else
+                final = final & "Phone: " & TextPrimaryPhone.Text & " :: "
+            End If
+            final = final & " Transaction: " & TextTransaction.Text & Environment.NewLine
+            final = final & "Email: " & TextEmail.Text & Environment.NewLine
                 final = final & "Preferred Contact: "
                 If CheckPhone.Checked Then
                     final = final & " Phone "
